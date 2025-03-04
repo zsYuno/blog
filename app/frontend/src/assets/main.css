@@ -1,0 +1,15 @@
+.article-card {
+  @apply bg-white rounded-lg shadow-md p-6 mb-6;
+  
+  @media (max-width: 640px) {
+    @apply p-4;
+  }
+}
+
+.search-container {
+  @apply flex flex-col md:flex-row gap-4 mb-8;
+  
+  input, select {
+    @apply p-2 border rounded-md;
+  }
+}

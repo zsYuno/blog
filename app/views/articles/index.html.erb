@@ -1,0 +1,21 @@
+<h1>MYブログ</h1>
+
+<div>
+  <%= link_to "記事投稿", new_article_path %>
+</div>
+
+<ul>
+  <% @articles.each do |article| %>
+  <li>
+    <h2><%= article.title %></h2>
+    <p><%= article.content %></p>
+    <span>
+      <small><%= article.created_at %></small>
+    </span>
+    <div>
+      <%= button_to "編集", edit_article_path(article), method: :get %>
+      <%= button_to "削除", article_path(article), method: :delete %>
+    </div>
+  </li>
+  <% end %>
+</ul>
